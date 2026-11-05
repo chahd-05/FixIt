@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function RepaireCard({ repair }) {
+function RepairCard({ repair }) {
 
     const [showDetails, setShowDetails] = useState(false);
     function handleClick() {
@@ -30,4 +30,4 @@ function RepaireCard({ repair }) {
     );
 }
 
-export default RepaireCard;
+export default RepairCard;

@@ -1,13 +1,12 @@
-import { initialRepairs } from "./data";
 import RepairCard from "./RepairCard";
 
-
-function RepairList() {
+function RepairList({ repairs = [] }) {
     return (
         <div>
             <h2>Liste des réparations</h2>
+
             <div>
-                {initialRepairs.map((repair) => (
+                {repairs.map((repair) => (
                     <RepairCard
                         key={repair.id}
                         repair={repair}
