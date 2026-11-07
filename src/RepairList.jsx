@@ -20,6 +20,16 @@ function RepairList() {
         ]);
     }
 
+    function handleFinish(id) {
+        setRepairs((currentRepairs) => 
+            currentRepairs.map((repair) => 
+                repair.id === id
+                    ? {...repair, status: "termine"}
+                    : repair
+            )
+        );
+    }
+
     return (
         <div>
             <h2>Liste des réparations</h2>
@@ -31,6 +41,7 @@ function RepairList() {
                     <RepairCard
                         key={repair.id}
                         repair={repair}
+                        onFinish={handleFinish}
                     />
                 ))}
             </div>
