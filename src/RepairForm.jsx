@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function repairForm({ onAddRepair }) {
+function RepairForm({ onAddRepair }) {
     const [device, setDevice] = useState("")
 
     function handleSubmit(event) {
@@ -33,5 +33,5 @@ function repairForm({ onAddRepair }) {
 
 }
 
-export default repairForm;
+export default RepairForm;
 
