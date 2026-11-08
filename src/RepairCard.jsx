@@ -36,4 +36,4 @@ function RepaireCard({ repair, onFinish }) {
     )
 }
 
-export default RepaireCard;
+export default RepairCard;

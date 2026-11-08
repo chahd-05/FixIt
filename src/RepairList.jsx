@@ -1,8 +1,7 @@
-import { initialRepairs } from "./data";
 import RepairCard from "./RepairCard";
 import { useState } from "react";
 import RepairForm from "./RepairForm";
-
+import { initialRepairs } from "./data";
 
 function RepairList() {
     const [repairs, setRepairs] = useState(initialRepairs);
@@ -21,10 +20,10 @@ function RepairList() {
     }
 
     function handleFinish(id) {
-        setRepairs((currentRepairs) => 
-            currentRepairs.map((repair) => 
+        setRepairs((currentRepairs) =>
+            currentRepairs.map((repair) =>
                 repair.id === id
-                    ? {...repair, status: "termine"}
+                    ? { ...repair, status: "termine" }
                     : repair
             )
         );
