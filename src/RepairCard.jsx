@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function RepaireCard({ repair }) {
+function RepaireCard({ repair, onFinish }) {
 
     const [showDetails, setShowDetails] = useState(false);
     function handleClick() {
@@ -14,6 +14,12 @@ function RepaireCard({ repair }) {
             <p>
                 Statut : {repair.status}
             </p>
+
+            {repair.status !== "termine" && (
+                <button type="button" onClick={() => onFinish(repair.id)}>
+                    terminer
+                </button>
+            )}
             <button onClick={handleClick}>
                 {showDetails ? "Masquer les détails" : "Afficher les détails"}
             </button>
@@ -27,7 +33,7 @@ function RepaireCard({ repair }) {
             )}
         </div>
 
-    );
+    )
 }
 
 export default RepaireCard;
